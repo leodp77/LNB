@@ -1,0 +1,42 @@
+﻿@model LNB.Models.CoachStatistic
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CoachStatistic</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Coach.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coach.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Game.GameId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game.GameId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TechnicalFouls)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TechnicalFouls)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CoachStatisticId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<LNB.Models.Game>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Stadium.Province)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeTeamId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorTeamId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstRefereeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondRefereeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThirdRefereeId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stadium.Province)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeTeamId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorTeamId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstRefereeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecondRefereeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThirdRefereeId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GameId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GameId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GameId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,115 @@
+﻿@model IEnumerable<LNB.Models.Player>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using(Html.BeginForm())
+{
+    <p>
+        Buscar por apellido: @Html.TextBox("searchString")
+        <input type="submit" value="Buscar" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Apellido", "Index", new { sortOrder=ViewBag.SurnameSortParm})
+            @*@Html.DisplayNameFor(model => model.Surname)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerPrincipalPosition.Abbreviation)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.PlayerSecondaryPosition.Abbreviation)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.ActionLink("Altura", "Index", new { sortOrder = ViewBag.HeightSortParm })
+            @*@Html.DisplayNameFor(model => model.Height)*@
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.NickName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Country.Name)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.DocumentNumber)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Province)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlayerPrincipalPosition.Abbreviation)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.PlayerSecondaryPosition.Abbreviation)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.NickName)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Country.Name)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.DocumentNumber)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthDate)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Province)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>*@
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.PlayerId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.PlayerId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.PlayerId })
+        </td>
+    </tr>
+}
+
+</table>

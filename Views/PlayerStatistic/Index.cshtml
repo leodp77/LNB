@@ -1,0 +1,147 @@
+﻿@model IEnumerable<LNB.Models.PlayerStatistic>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Game.GameId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Player.NickName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Minutes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TwoPointsMade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TwoPointsAttempt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThreePointsMade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThreePointsAttempt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SinglePointsMade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SinglePointsAttempt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OffensiveRebounds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DefensiveRebounds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Assists)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Steals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Blocks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Turnovers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonalFouls)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TechnicalFouls)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlagrantFouls)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasStarted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Game.GameId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Player.NickName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Minutes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TwoPointsMade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TwoPointsAttempt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThreePointsMade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThreePointsAttempt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SinglePointsMade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SinglePointsAttempt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OffensiveRebounds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DefensiveRebounds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assists)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Steals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Blocks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Turnovers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonalFouls)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TechnicalFouls)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlagrantFouls)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HasStarted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlayerStatisticId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlayerStatisticId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlayerStatisticId })
+        </td>
+    </tr>
+}
+
+</table>

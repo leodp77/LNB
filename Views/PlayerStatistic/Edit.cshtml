@@ -1,0 +1,194 @@
+﻿@model LNB.Models.PlayerStatistic
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>PlayerStatistic</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.PlayerStatisticId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PlayerId, "PlayerId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("PlayerId", String.Empty)
+                @Html.ValidationMessageFor(model => model.PlayerId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Minutes, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Minutes)
+                @Html.ValidationMessageFor(model => model.Minutes)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Points, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Points)
+                @Html.ValidationMessageFor(model => model.Points)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TwoPointsMade, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TwoPointsMade)
+                @Html.ValidationMessageFor(model => model.TwoPointsMade)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TwoPointsAttempt, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TwoPointsAttempt)
+                @Html.ValidationMessageFor(model => model.TwoPointsAttempt)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ThreePointsMade, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ThreePointsMade)
+                @Html.ValidationMessageFor(model => model.ThreePointsMade)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ThreePointsAttempt, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ThreePointsAttempt)
+                @Html.ValidationMessageFor(model => model.ThreePointsAttempt)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SinglePointsMade, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SinglePointsMade)
+                @Html.ValidationMessageFor(model => model.SinglePointsMade)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SinglePointsAttempt, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SinglePointsAttempt)
+                @Html.ValidationMessageFor(model => model.SinglePointsAttempt)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OffensiveRebounds, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OffensiveRebounds)
+                @Html.ValidationMessageFor(model => model.OffensiveRebounds)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DefensiveRebounds, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DefensiveRebounds)
+                @Html.ValidationMessageFor(model => model.DefensiveRebounds)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Assists, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Assists)
+                @Html.ValidationMessageFor(model => model.Assists)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Steals, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Steals)
+                @Html.ValidationMessageFor(model => model.Steals)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Blocks, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Blocks)
+                @Html.ValidationMessageFor(model => model.Blocks)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Turnovers, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Turnovers)
+                @Html.ValidationMessageFor(model => model.Turnovers)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PersonalFouls, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PersonalFouls)
+                @Html.ValidationMessageFor(model => model.PersonalFouls)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TechnicalFouls, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TechnicalFouls)
+                @Html.ValidationMessageFor(model => model.TechnicalFouls)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FlagrantFouls, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FlagrantFouls)
+                @Html.ValidationMessageFor(model => model.FlagrantFouls)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HasStarted, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HasStarted)
+                @Html.ValidationMessageFor(model => model.HasStarted)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GameId, "GameId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("GameId", String.Empty)
+                @Html.ValidationMessageFor(model => model.GameId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

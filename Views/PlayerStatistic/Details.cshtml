@@ -1,0 +1,178 @@
+﻿@model LNB.Models.PlayerStatistic
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PlayerStatistic</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Game.GameId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game.GameId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Player.NickName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player.NickName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Minutes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Minutes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Points)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Points)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TwoPointsMade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TwoPointsMade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TwoPointsAttempt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TwoPointsAttempt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThreePointsMade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThreePointsMade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThreePointsAttempt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThreePointsAttempt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SinglePointsMade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SinglePointsMade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SinglePointsAttempt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SinglePointsAttempt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffensiveRebounds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffensiveRebounds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefensiveRebounds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefensiveRebounds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assists)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assists)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Steals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Steals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Blocks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Blocks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Turnovers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Turnovers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonalFouls)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonalFouls)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TechnicalFouls)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TechnicalFouls)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlagrantFouls)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlagrantFouls)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasStarted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasStarted)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlayerStatisticId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
